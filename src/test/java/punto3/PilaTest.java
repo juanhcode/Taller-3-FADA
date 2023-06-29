@@ -14,6 +14,10 @@ class PilaTest {
     void estaVaciaPilaConColas() {
         Pila<Integer> pila = new Pila<>(5);
         assertEquals(pila.estaVaciaPilaConColas(),true);
+
+        Pila<Integer> pila2 = new Pila<>(5);
+        pila2.pushPilaConColas(2);
+        assertEquals(pila2.estaVaciaPilaConColas(),false);
     }
 
     @Test
@@ -24,6 +28,20 @@ class PilaTest {
         pila.pushPilaConColas(3);
         assertEquals(pila.estaVaciaPilaConColas(),false);
         assertEquals(3,pila.popPilaConColas());
+
+        Pila<Integer> pila2 = new Pila<>(5);
+        pila2.pushPilaConColas(100);
+        pila2.pushPilaConColas(23);
+        pila2.pushPilaConColas(35);
+        assertEquals(pila2.estaVaciaPilaConColas(),false);
+        assertEquals(35,pila2.popPilaConColas());
+
+        Pila<Integer> pila3 = new Pila<>(2);
+        pila3.pushPilaConColas(1);
+        pila3.pushPilaConColas(2);
+        assertThrows(IllegalStateException.class,()->{
+            pila3.pushPilaConColas(4);
+        });
     }
 
     @Test
@@ -46,6 +64,15 @@ class PilaTest {
             pila.popPilaConColas();
         });
 
+        Pila<Integer> pila2 = new Pila<>(5);
+        pila2.pushPilaConColas(100);
+        pila2.pushPilaConColas(200);
+        pila2.pushPilaConColas(300);
+        pila2.pushPilaConColas(400);
+        pila2.pushPilaConColas(500);
+
+        assertEquals(pila2.popPilaConColas(),500);
+
     }
 
     @Test
@@ -55,5 +82,21 @@ class PilaTest {
         pila.pushPilaConColas(2);
         pila.pushPilaConColas(3);
         pila.mostrarPilaConColas();
+
+        System.out.println("--------------------");
+
+        Pila<Integer> pila2 = new Pila<>(5);
+        pila2.pushPilaConColas(100);
+        pila2.pushPilaConColas(240);
+        pila2.pushPilaConColas(3231);
+        pila2.mostrarPilaConColas();
+
+
+        System.out.println("--------------------");
+
+        Pila<Integer> pila3 = new Pila<>(5);
+        pila3.pushPilaConColas(1);
+        pila3.pushPilaConColas(3231);
+        pila3.mostrarPilaConColas();
     }
 }

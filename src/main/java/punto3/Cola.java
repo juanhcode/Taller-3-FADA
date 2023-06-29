@@ -18,7 +18,7 @@ public class Cola<T> {
 
     public void agregar(T elemento){
         if(this.size == capacidad){
-            throw new IllegalStateException("La cola está llena");
+            throw new IllegalStateException("Está llena");
         }
         finCola++;
         if(finCola >= capacidad){
@@ -30,7 +30,7 @@ public class Cola<T> {
 
     public T eliminar(){
         if(size == 0){
-            throw new IllegalStateException("La cola está vacía");
+            throw new IllegalStateException("Está vacía");
         }
         T eliminado = elementos[inicioCola];
         inicioCola++;
@@ -43,7 +43,7 @@ public class Cola<T> {
 
     public T peek(){
         if(this.size == 0){
-            throw new IllegalStateException("La cola está vacia");
+            throw new IllegalStateException("Está vacia");
         }
         System.out.println(elementos[inicioCola]);
         return this.elementos[inicioCola];
