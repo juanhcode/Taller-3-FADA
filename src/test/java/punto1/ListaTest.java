@@ -95,7 +95,7 @@ class ListaTest {
         L3.imprimirLista();
 
 
-        
+
         Lista L5 = new Lista();
 
         L5.insertarOrden(75);

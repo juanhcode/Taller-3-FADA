@@ -91,5 +91,12 @@ class InventarioTest {
         inventario3.agregarReplica("Gioconda");
         inventario3.venderReplica("Gioconda");
         inventario3.listarReplicas();
+        System.out.println("--------------------------");
+        System.out.println("Inventario 4");
+        Inventario inventario4 = new Inventario();
+        inventario4.agregarReplica("Gioconda");
+        System.out.println(inventario4.venderReplica("La Creación de Adán"));
+        inventario4.listarReplicas();
+
     }
 }
