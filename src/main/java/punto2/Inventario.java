@@ -25,22 +25,6 @@ public class Inventario {
                 actual.setSiguiente(nuevoNodo);
             }
         }
-
-        /*
-        Nodo actual = cabeza;
-        while (actual != null) {
-            if (actual.getObra().getNombre().equals(nombre)) {
-                actual.getObra().aumentarCantidad();
-                return;
-            }
-            actual = actual.getSiguiente();
-        }
-
-        Obra nuevaObra = new Obra(nombre, 1);
-        Nodo nuevoNodo = new Nodo(nuevaObra);
-        nuevoNodo.setSiguiente(cabeza);
-        cabeza = nuevoNodo;
-        */
     }
 
     public String venderReplica(String nombre){

@@ -18,6 +18,13 @@ class PilaTest {
         Pila<Integer> pila2 = new Pila<>(5);
         pila2.pushPilaConColas(2);
         assertEquals(pila2.estaVaciaPilaConColas(),false);
+
+        Pila<Integer> pila3 = new Pila<>(5);
+        pila3.pushPilaConColas(2);
+        pila3.pushPilaConColas(5);
+        pila3.pushPilaConColas(7);
+
+        assertEquals(pila3.estaVaciaPilaConColas(),false);
     }
 
     @Test
@@ -70,8 +77,12 @@ class PilaTest {
         pila2.pushPilaConColas(300);
         pila2.pushPilaConColas(400);
         pila2.pushPilaConColas(500);
-
+        System.out.println("Pila");
+        pila2.mostrarPilaConColas();
+        System.out.println("-------------------");
+        System.out.println("Elemento eliminado de pila");
         assertEquals(pila2.popPilaConColas(),500);
+        pila2.mostrarPilaConColas();
 
     }
 
